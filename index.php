@@ -1,0 +1,1 @@
+<?php echo("Mapha Trucking Server is running...") ?>
