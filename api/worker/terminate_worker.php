@@ -12,7 +12,7 @@ $uuid = $_POST['uuid'];
 try {
 
     $sql = "UPDATE tblworker SET
-        actvie=0
+        active=0
         WHERE uuid='$uuid'";
 
     $result = $db->query($sql);
