@@ -11,7 +11,7 @@ $uuid = $_POST['uuid'];
 $worker = $_POST['worker'];
 $date = $_POST['date'];
 $amount = $_POST['amount'];
-$paid = $_POST['paid'];
+$paid = '0';
 
 try {
 
