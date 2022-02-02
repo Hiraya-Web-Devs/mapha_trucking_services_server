@@ -75,7 +75,9 @@ try {
     )";
     //1 is for active status
 
-    $result = $db->query($sql);
+    $result = $sql;
+
+    //$result = $db->query($sql);
     
 } catch (MySQLException $e) {
     $result = $e;
