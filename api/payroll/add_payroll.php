@@ -21,4 +21,30 @@ $loan_payment = $_POST['loan_payment'];
 $received = $_POST['received'];
 $rate = $_POST['rate'];
 
+try {
+
+    $sql = "INSERT INTO tblpayroll VALUES (
+        '$uuid',
+        '$worker',
+        '$date_from',
+        '$date_to',
+        $trips,
+        $special_trips,
+        $loan,
+        $salary,
+        $deduction,
+        $special_salary,
+        $loan_payment,
+        $received,
+        $rate
+    )";
+
+    $result = $db->query($sql);
+
+} catch (MySQLException $e) {
+    $result = $e;
+}
+
+echo json_encode($result);
+
 ?>
