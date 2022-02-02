@@ -11,9 +11,7 @@ $uuid = $_POST['uuid'];
 
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "DELETE FROM tblexpenses WHERE uuid='$uuid'";
 
     $result = $db->query($sql);
 
@@ -22,5 +20,6 @@ try {
 }
 
 echo json_encode($result);
+
 
 ?>

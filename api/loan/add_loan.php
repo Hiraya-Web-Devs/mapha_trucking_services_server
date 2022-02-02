@@ -8,12 +8,20 @@ if(!isset($_POST['uuid'])) {
 }
 
 $uuid = $_POST['uuid'];
+$worker = $_POST['worker'];
+$date = $_POST['date'];
+$amount = $_POST['amount'];
+$paid = $_POST['paid'];
 
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "INSERT INTO tblloan VALUES (
+        '$uuid',
+        '$worker',
+        '$date',
+        $amount,
+        $paid
+    )";
 
     $result = $db->query($sql);
 

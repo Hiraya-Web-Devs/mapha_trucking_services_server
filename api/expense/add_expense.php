@@ -8,12 +8,20 @@ if(!isset($_POST['uuid'])) {
 }
 
 $uuid = $_POST['uuid'];
+$date = $_POST['date']; 
+$description = $_POST['description'];
+$amount = $_POST['amount'];
+$type = $_POST['type'];
 
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "INSERT INTO tblexpenses VALUES (
+        '$uuid',
+        '$date',
+        '$description',
+        $amount,
+        $type
+    )";
 
     $result = $db->query($sql);
 
@@ -22,5 +30,6 @@ try {
 }
 
 echo json_encode($result);
+
 
 ?>

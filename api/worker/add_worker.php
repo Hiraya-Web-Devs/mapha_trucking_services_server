@@ -2,7 +2,7 @@
 
 require_once('../../config.php');
 
-if(!isset(_POST['uuid'])) {
+if(!isset($_POST['uuid'])) {
     echo json_encode('Empty Data');
     return;
 }

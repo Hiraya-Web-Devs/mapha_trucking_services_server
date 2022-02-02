@@ -8,12 +8,15 @@ if(!isset($_POST['uuid'])) {
 }
 
 $uuid = $_POST['uuid'];
+$username = $_POST['username'];
+$password = $_POST['password'];
 
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "UPDATE tbluser SET
+        username='$username',
+        password='$password'
+    WHERE uuid='$uuid'";
 
     $result = $db->query($sql);
 

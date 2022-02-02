@@ -7,13 +7,9 @@ if(!isset($_POST['uuid'])) {
     return;
 }
 
-$uuid = $_POST['uuid'];
-
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "DELETE FROM tblloan WHERE uuid='$uuid'";
 
     $result = $db->query($sql);
 

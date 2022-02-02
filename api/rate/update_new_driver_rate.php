@@ -2,18 +2,18 @@
 
 require_once('../../config.php');
 
-if(!isset($_POST['uuid'])) {
+if(!isset($_POST['amount'])) {
     echo json_encode('Empty Data');
     return;
 }
 
-$uuid = $_POST['uuid'];
+$amount = $_POST['amount'];
 
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "UPDATE tblsalaryrate SET
+        amount=$amount
+    WHERE description='driver_new'";
 
     $result = $db->query($sql);
 

@@ -7,6 +7,7 @@ if(!isset($_POST['uuid'])) {
     return;
 }
 
+$uuid = $_POST['uuid'];
 
 try {
 

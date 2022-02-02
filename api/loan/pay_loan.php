@@ -8,12 +8,13 @@ if(!isset($_POST['uuid'])) {
 }
 
 $uuid = $_POST['uuid'];
+$paid = $_POST['paid'];
 
 try {
 
-    $sql = "UPDATE tblworker SET
-        actvie=0
-        WHERE uuid='$uuid'";
+    $sql = "UPDATE tblloan SET
+        paid=$paid
+    WHERE uuid='$uuid'";
 
     $result = $db->query($sql);
 
