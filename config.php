@@ -8,16 +8,17 @@ $username = "u135501428_hirayatechdev";
 $password = "Hirayatech2022";
 $dbname = "u135501428_mapha_trucking";
 
-try {
-    // Create connection
-    $db = new mysqli($serverhost, $username, $password, $dbname);
+// Create connection
+$db = new mysqli($serverhost, $username, $password, $dbname);
 
-    // Check connection
-    if ($db->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-} catch (\Throwable $th) {
-    die("Connection failed: ".$th);
-}
+// Check connection
+// if ($db->connect_error) {
+//     die("Connection failed: " . $conn->connect_error);
+// }
+
+if ($db -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $db -> connect_error;
+    exit();
+} 
 
 ?>
