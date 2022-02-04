@@ -3,7 +3,7 @@ header('Access-Control-Allow-Origin: *');
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Access-Control-Allow-Origin, Access-Control-Allow-Methods, X-Requested-With");
 
-$serverhost = "194.163.35.1";
+$serverhost = "194.163.35.34";
 $username = "u135501428_hirayatechdev";
 $password = "Hirayatech2022";
 $dbname = "u135501428_mapha_trucking";
