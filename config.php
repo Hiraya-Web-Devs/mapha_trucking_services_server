@@ -8,12 +8,16 @@ $username = "u135501428_hirayatechdev";
 $password = "Hirayatech2022";
 $dbname = "u135501428_mapha_trucking";
 
-// Create connection
-$db = new mysqli($serverhost, $username, $password, $dbname);
+try {
+    // Create connection
+    $db = new mysqli($serverhost, $username, $password, $dbname);
 
-// Check connection
-if ($db->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // Check connection
+    if ($db->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
+} catch (\Throwable $th) {
+    die("Connection failed: ".$th);
 }
 
 ?>
