@@ -11,11 +11,12 @@ if(!isset($_FILES['file'])) {
 }
 
 $folder = $_POST['folder'];
+$new_name = $_POST['new_name'];
 
 if($_FILES['file']) {
 
     // name of the uploaded file
-    $filename = $_FILES['file']['name'];
+    $filename = $new_name;
 
     // destination of the file on the server
     $destination = '../uploads/'.$folder.'/'.$filename;
