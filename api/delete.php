@@ -11,6 +11,8 @@ if(!isset($_POST['file_pointer'])) {
 
 $file_pointer = $_POST['file_pointer'];
 
+$file_pointer = '../uploads/'.$file_pointer;
+
 if (!unlink($file_pointer)) { 
     echo json_encode("$file_pointer cannot be deleted due to an error");
 }
