@@ -48,8 +48,8 @@ try {
         $driver_special,
         $helper_special
     )";
-
-    $result = $db->query($sql);
+    echo json_encode($sql);
+    //$result = $db->query($sql);
 
 } catch (MySQLException $e) {
     $result = $e;
