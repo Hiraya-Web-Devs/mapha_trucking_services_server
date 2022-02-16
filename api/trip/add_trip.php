@@ -2,10 +2,6 @@
 
 require_once('../../config.php');
 
-if(!isset($_POST['uuid'])) {
-    echo json_encode('Empty Data');
-    return;
-}
 
 $uuid = $_POST['uuid'];
 $waybill_no = $_POST['waybill_no'];
