@@ -2,10 +2,10 @@
 
 require_once('../../config.php');
 
-if(!isset($_POST['uuid'])) {
-    echo json_encode('Empty Data');
-    return;
-}
+// if(!isset($_POST['uuid'])) {
+//     echo json_encode('Empty Data');
+//     return;
+// }
 
 $uuid = $_POST['uuid'];
 $plate_no = $_POST['plate_no'];
