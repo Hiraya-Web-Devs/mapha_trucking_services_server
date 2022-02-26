@@ -39,12 +39,12 @@ try {
         $rate
     )";
 
-    //$result = $db->query($sql);
+    $result = $db->query($sql);
 
 } catch (MySQLException $e) {
     $result = $e;
 }
 
-echo json_encode($sql);
+echo json_encode($result);
 
 ?>
